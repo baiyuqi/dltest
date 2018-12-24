@@ -11,7 +11,7 @@ import scipy
 with tf.Graph().as_default():
     # Load BigGAN 512 module.
     #module = hub.Module('https://tfhub.dev/deepmind/biggan-512/2')
-    module = hub.Module('d:/downloaded/biggan')
+    module = hub.Module('d:/downloaded/bigan')
 
     # Sample random noise (z) and ImageNet label (y) inputs.
     batch_size = 2
