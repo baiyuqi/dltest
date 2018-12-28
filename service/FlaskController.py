@@ -1,9 +1,10 @@
 from flask import Flask, render_template, jsonify, request, Response, make_response, send_from_directory, abort,send_file
 import biggan512 as bg
-import mobilenet2 as cl
+import mobilenet2 as mn
 import service.pb_colorizer as colorize
 app = Flask(__name__)
 import PIL.Image as Image
+import vgg.classify as classify
 @app.route("/create")
 def create():
     img = bg.create()
@@ -21,7 +22,7 @@ def up_photo():
     img = request.files.get('photo')
     color.colorize(img)
     data = img.read()
-    pro = cl.predict(data)
+    pro = mn.predict(data)
     print()
 
     return pro
