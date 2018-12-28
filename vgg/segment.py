@@ -9,7 +9,7 @@ import sys
 from datasets import imagenet
 from nets import vgg
 from preprocessing import vgg_preprocessing
-from classifier.vgg import names
+from vgg import names
 
 slim = tf.contrib.slim
 checkpoints_dir = '/repository/checkpoints'
