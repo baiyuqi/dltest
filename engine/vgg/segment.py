@@ -2,14 +2,10 @@ from matplotlib import pyplot as plt
 import numpy as np
 import os
 import tensorflow as tf
-import urllib.error
 import urllib.request as req
-import sys
 
-from datasets import imagenet
 from nets import vgg
-from preprocessing import vgg_preprocessing
-from vgg import names
+from engine.vgg import names
 
 slim = tf.contrib.slim
 checkpoints_dir = '/repository/checkpoints'

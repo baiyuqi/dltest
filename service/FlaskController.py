@@ -1,10 +1,11 @@
-from flask import Flask, render_template, jsonify, request, Response, make_response, send_from_directory, abort,send_file
-import biggan512 as bg
-import mobilenet2 as mn
-import service.pb_colorizer as colorize
+from flask import Flask, request, send_file
+from engine.hub import biggan512 as bg, mobilenet2 as mn
+import engine.third.pb_colorizer as colorize
+import engine.vgg.classify
 app = Flask(__name__)
 import PIL.Image as Image
-import vgg.classify as classify
+
+
 @app.route("/create")
 def create():
     img = bg.create()
