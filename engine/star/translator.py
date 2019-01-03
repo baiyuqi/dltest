@@ -1,6 +1,6 @@
 import os
 import argparse
-from engine.star.solver import Solver
+from engine.star.mysolver import MySolver
 from engine.star.data_loader import get_loader
 from torch.backends import cudnn
 
@@ -17,7 +17,7 @@ def main(config):
                                'CelebA', config.mode, config.num_workers)
 
     # Solver for training and testing StarGAN.
-    solver = Solver(celeba_loader,  config)
+    solver = MySolver(celeba_loader,  config)
     solver.test()
 
 

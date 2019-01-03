@@ -1,6 +1,6 @@
 import os
 import argparse
-from engine.star.solver import Solver
+from engine.star.mysolver import Solver
 from engine.star.data_loader import get_loader
 from torch.backends import cudnn
 
